@@ -1,0 +1,12 @@
+
+boot:
+  config: ${env.config.uri:http://127.0.0.1:52061}
+
+
+spring:
+  cloud:
+    config:
+        uri         : ${boot.config}
+        name        : cloudx-gate,deploy
+        label       : master
+        profile     : default
