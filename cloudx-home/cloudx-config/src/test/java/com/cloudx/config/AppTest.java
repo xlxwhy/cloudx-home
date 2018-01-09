@@ -1,4 +1,4 @@
-package org.cloudx.config;
+package com.cloudx.config;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

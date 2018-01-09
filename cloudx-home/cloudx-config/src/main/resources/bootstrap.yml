@@ -1,0 +1,22 @@
+
+server:
+    port: 32061 #启动端口
+
+spring.application:
+    name: cloudx-config
+spring.cloud.config.server.git:
+    ##base
+    uri: https://host/config-repo.git 
+    force-pull: true
+    ##special
+    repos:
+       config-repo:
+          pattern     : ${config.name}-*, deploy*
+          uri         : ${config.repo}
+          username    : ${config.username}
+          password    : ${config.password}
+          searchPaths : "${config.name}/{application}"     #比如：cloudx/cloudx-center/cloudx-center.yml
+          cloneOnStart: true                               #启动时下载配置
+
+          
+          
