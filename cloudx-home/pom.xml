@@ -20,6 +20,7 @@
 		<module>cloudx-config</module>
 		<module>cloudx-view</module>
 		<module>cloudx-gateway</module>
+		<module>cloudx-eureka</module>
 	</modules>
 
 	<properties>
