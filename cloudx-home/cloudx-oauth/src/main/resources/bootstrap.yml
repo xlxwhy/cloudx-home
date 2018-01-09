@@ -1,0 +1,6 @@
+
+spring.cloud.config:
+    uri         : ${boot.config.uri:http://127.0.0.1:32061}
+    name        : cloudx-oauth,deploy
+    label       : master
+    profile     : default

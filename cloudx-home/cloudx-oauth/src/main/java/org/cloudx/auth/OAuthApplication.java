@@ -32,10 +32,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableAutoConfiguration
 @Controller
 @SessionAttributes("authorizationRequest")
-public class AuthApplication extends WebMvcConfigurerAdapter {
+public class OAuthApplication extends WebMvcConfigurerAdapter {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AuthApplication.class, args);
+		SpringApplication.run(OAuthApplication.class, args);
 	}
 	
 	@Override
