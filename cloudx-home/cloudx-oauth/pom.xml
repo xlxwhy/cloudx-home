@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>cloudx-auth</artifactId>
+	<artifactId>cloudx-oauth</artifactId>
 	<packaging>jar</packaging>
 	<name>auth server</name>
 	<description>Demo project for Spring Boot</description>

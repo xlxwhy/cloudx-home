@@ -16,7 +16,7 @@
 	</parent>
 
 	<modules>
-		<module>cloudx-auth</module>
+		<module>cloudx-oauth</module>
 		<module>cloudx-config</module>
 		<module>cloudx-view</module>
 		<module>cloudx-gateway</module>
