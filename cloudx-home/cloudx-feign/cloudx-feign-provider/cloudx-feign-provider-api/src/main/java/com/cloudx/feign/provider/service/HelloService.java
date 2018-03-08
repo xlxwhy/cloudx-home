@@ -10,14 +10,13 @@ import com.cloudx.feign.provider.entity.User;
 
 public interface HelloService {
 	
-	@RequestMapping(value="/feign-service/serviceGet",method=RequestMethod.GET)
+	@RequestMapping(value="/feign-service/get",method=RequestMethod.GET)
 	String hello(@RequestParam("name") String name);
 	
-	@RequestMapping(value="/feign-service/serviceHead", method=RequestMethod.HEAD)
-	String hello(@RequestHeader("name") String name,
-			@RequestHeader("password") String password);
+	@RequestMapping(value="/feign-service/header", method=RequestMethod.HEAD)
+	String hello(@RequestHeader("name") String name, @RequestHeader("password") String password);
 	
-	@RequestMapping(value="/feign-service/servicePost", method=RequestMethod.POST)
+	@RequestMapping(value="/feign-service/post", method=RequestMethod.POST)
 	String hello(@RequestBody User user);
 	
 	

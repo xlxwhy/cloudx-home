@@ -1,4 +1,4 @@
-package com.cloudx.feign.provider.controller;
+package com.cloudx.feign.provider.service;
 
 import java.util.Random;
 
@@ -13,18 +13,8 @@ import com.cloudx.feign.provider.entity.User;
 import com.cloudx.feign.provider.service.HelloService;
 
 @RestController
-public class HelloServiceContorller implements HelloService {
+public class HelloServiceImpl implements HelloService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-    
-    private void sleep(String methodName) {
-        int sleepMinTime = new Random().nextInt(3000);
-        logger.info("helloService " + methodName + " sleepMinTime: " + sleepMinTime);
-//        try {
-//            //Thread.sleep(sleepMinTime);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-    }
     
     @Override
     public String hello(@RequestParam("name") String name) {
@@ -42,5 +32,15 @@ public class HelloServiceContorller implements HelloService {
     public String hello(@RequestBody User userDemo) {
         sleep("post");
         return userDemo.toString();
+    }
+    
+    private void sleep(String methodName) {
+        int sleepMinTime = new Random().nextInt(3000);
+        logger.info("helloService " + methodName + " sleepMinTime: " + sleepMinTime);
+        //        try {
+        //            //Thread.sleep(sleepMinTime);
+        //        } catch (InterruptedException e) {
+        //            e.printStackTrace();
+        //        }
     }
 }

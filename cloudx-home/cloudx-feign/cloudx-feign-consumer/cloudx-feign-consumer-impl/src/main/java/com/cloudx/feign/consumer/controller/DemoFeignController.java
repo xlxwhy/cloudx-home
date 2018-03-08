@@ -13,16 +13,16 @@ import com.cloudx.feign.provider.entity.User;
 public class DemoFeignController {
 	
 	@Autowired
-	private FeignHelloService feignService;
+	private FeignHelloService helloService;
 	
 	@RequestMapping(value="/test", method=RequestMethod.GET)
 	public String demoServiceTest() {
 		StringBuffer sb = new StringBuffer();
-		sb.append(feignService.hello("yuanyuan"));
+		sb.append(helloService.hello("yuanyuan"));
 		sb.append("<br>");
-		sb.append(feignService.hello("yjt","xixihaha"));
+		sb.append(helloService.hello("yjt","xixihaha"));
 		sb.append("<br>");
-		sb.append(feignService.hello(new User("yejingtao","123456")));
+		sb.append(helloService.hello(new User("yejingtao","123456")));
 		return sb.toString();
 	}
 }
