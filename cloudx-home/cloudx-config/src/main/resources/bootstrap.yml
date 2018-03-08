@@ -19,4 +19,3 @@ spring.cloud.config.server.git:
           cloneOnStart: true                               #启动时下载配置
 
           
-          

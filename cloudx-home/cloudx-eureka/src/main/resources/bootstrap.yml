@@ -1,6 +1,6 @@
 
 spring.cloud.config:
     uri         : ${boot.config.uri:http://127.0.0.1:32061}
-    name        : cloudx-eureka,deploy
+    name        : cloudx-eureka,deploy,
     label       : master
-    profile     : default
+    profile     : default,sit
